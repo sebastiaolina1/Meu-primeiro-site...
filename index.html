@@ -2,588 +2,139 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#10152d">
-
-    <title>aBAchat | Behring Academy</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#064e3b">
+  <meta name="description" content="aBAChat — conectando a comunidade Behring Academy.">
+  <title>aBAChat — Behring Academy Chat</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-
 <body>
+  <header class="topbar">
+    <a class="brand" href="#inicio">
+      <span class="brand-icon">a</span>
+      <span>aBA<span class="brand-light">Chat</span></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">☰</button>
+    <nav id="navigation">
+      <a href="#inicio">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#comunidade">Comunidade</a>
+      <a href="#encontros">Encontros</a>
+    </nav>
+    <a href="#comunidade" class="top-button">Conhecer a comunidade ↗</a>
+  </header>
 
-<div class="app-shell">
-
-    <!-- MENU LATERAL -->
-    <aside class="sidebar">
-
-        <a class="brand" href="#">
-            <div class="brand-mark">a<span>BA</span></div>
-
-            <div class="brand-name">
-                aBAchat
-                <small>Behring Academy</small>
-            </div>
-        </a>
-
-        <div class="profile-mini">
-            <div class="avatar avatar-you">GS</div>
-
-            <div>
-                <strong id="sideName">Guilherme</strong>
-                <small>Aluno da BA</small>
-            </div>
-
-            <span class="online-dot"></span>
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <div class="eyebrow"><span class="live-dot"></span> UMA INICIATIVA DA COMUNIDADE BA</div>
+        <h1>Boas conversas.<br><span>Grandes conexões.</span></h1>
+        <p>Um espaço para conhecer pessoas, compartilhar experiências e aproximar ainda mais a comunidade Behring Academy.</p>
+        <div class="hero-actions">
+          <a class="primary-button" href="#encontros">Quero participar <span>→</span></a>
+          <a class="text-button" href="#sobre">Conheça o projeto</a>
         </div>
-
-        <nav>
-
-            <button class="nav-link active" data-page="home">
-                <span>⌂</span>
-                Início
-            </button>
-
-            <button class="nav-link" data-page="discover">
-                <span>◎</span>
-                Descobrir alunos
-            </button>
-
-            <button class="nav-link" data-page="schedule">
-                <span>▦</span>
-                Agendamentos
-                <i id="scheduleCount">0</i>
-            </button>
-
-            <button class="nav-link" data-page="messages">
-                <span>▤</span>
-                Conversas
-            </button>
-
-        </nav>
-
-        <div class="sidebar-bottom">
-
-            <div class="sidebar-note">
-                <span>✦</span>
-                <p>
-                    Ideias crescem quando são compartilhadas.
-                </p>
-            </div>
-
-            <button class="nav-link" data-page="profile">
-                <span>⚙</span>
-                Meu perfil
-            </button>
-
+        <div class="hero-note">
+          <div class="avatar-stack"><span>G</span><span>G</span><span>BA</span></div>
+          <p>Idealizado por alunos da <strong>turma Nexus</strong></p>
         </div>
-
-        <div class="sidebar-footer">
-            Uma comunidade de alunos BA<br>
-            © 2026 aBAchat
+      </div>
+      <div class="hero-art">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="chat-card">
+          <div class="chat-card-top"><span class="online-dot"></span> CONEXÃO INICIADA</div>
+          <div class="chat-emoji">💬</div>
+          <h3>Uma conversa pode mudar tudo.</h3>
+          <p>Novas ideias começam quando pessoas se conectam.</p>
+          <div class="chat-people"><span>G</span><span>G</span><span>+</span></div>
         </div>
-
-    </aside>
-
-
-    <!-- CONTEÚDO PRINCIPAL -->
-    <main class="main">
-
-        <header class="topbar">
-
-            <div class="mobile-brand">
-                a<span>BA</span>chat
-            </div>
-
-            <div class="crumb">
-                Comunidade <span>/</span>
-                <b id="pageTitle">Início</b>
-            </div>
-
-            <div class="top-actions">
-
-                <button class="icon-btn" id="notificationsBtn">
-                    ♧
-                </button>
-
-                <div class="avatar avatar-you small-avatar">
-                    GS
-                </div>
-
-            </div>
-
-        </header>
-
-
-        <!-- INÍCIO -->
-        <section class="page active" id="page-home">
-
-            <div class="welcome">
-
-                <div>
-
-                    <div class="eyebrow">
-                        SUA COMUNIDADE, SUAS CONEXÕES
-                    </div>
-
-                    <h1>
-                        Boas-vindas ao
-                        <span>aBAchat.</span>
-                    </h1>
-
-                    <p>
-                        Conheça outros alunos, compartilhe ideias
-                        e marque uma conversa por vídeo.
-                    </p>
-
-                    <button class="primary-btn" data-go="discover">
-                        Encontrar alunos <span>→</span>
-                    </button>
-
-                </div>
-
-                <div class="welcome-art">
-
-                    <div class="orbit orbit-one"></div>
-                    <div class="orbit orbit-two"></div>
-
-                    <div class="art-center">
-                        a<span>BA</span>
-                    </div>
-
-                    <div class="bubble bubble-one">✦</div>
-                    <div class="bubble bubble-two">•••</div>
-                    <div class="bubble bubble-three">↗</div>
-
-                </div>
-
-            </div>
-
-
-            <div class="section-heading">
-
-                <div>
-                    <div class="eyebrow">VISÃO GERAL</div>
-                    <h2>Sua comunidade</h2>
-                </div>
-
-                <span class="muted">
-                    Feita para aproximar talentos
-                </span>
-
-            </div>
-
-
-            <div class="stats-grid">
-
-                <article class="stat-card">
-
-                    <div class="stat-icon purple">◎</div>
-
-                    <div>
-                        <strong>120+</strong>
-                        <span>Alunos na comunidade</span>
-                    </div>
-
-                    <small>Exemplo</small>
-
-                </article>
-
-
-                <article class="stat-card">
-
-                    <div class="stat-icon blue">▦</div>
-
-                    <div>
-                        <strong id="homeMeetings">0</strong>
-                        <span>Conversas agendadas</span>
-                    </div>
-
-                    <small>Suas</small>
-
-                </article>
-
-
-                <article class="stat-card">
-
-                    <div class="stat-icon orange">✦</div>
-
-                    <div>
-                        <strong>24</strong>
-                        <span>Áreas de interesse</span>
-                    </div>
-
-                    <small>Explore</small>
-
-                </article>
-
-            </div>
-
-
-            <div class="content-grid">
-
-                <section class="panel">
-
-                    <div class="panel-head">
-
-                        <div>
-                            <div class="eyebrow">PESSOAS</div>
-                            <h3>Alunos para conhecer</h3>
-                        </div>
-
-                        <button class="text-btn" data-go="discover">
-                            Ver todos →
-                        </button>
-
-                    </div>
-
-                    <div id="suggestedUsers" class="user-list"></div>
-
-                </section>
-
-
-                <section class="panel upcoming">
-
-                    <div class="panel-head">
-
-                        <div>
-                            <div class="eyebrow">AGENDA</div>
-                            <h3>Próximas conversas</h3>
-                        </div>
-
-                        <button class="text-btn" data-go="schedule">
-                            Ver agenda →
-                        </button>
-
-                    </div>
-
-                    <div id="homeSchedule" class="empty-state">
-
-                        <div class="empty-icon">▦</div>
-
-                        <strong>
-                            Nenhuma conversa marcada
-                        </strong>
-
-                        <p>
-                            Convide alguém para uma conversa
-                            e troque experiências.
-                        </p>
-
-                    </div>
-
-                </section>
-
-            </div>
-
-        </section>
-
-
-        <!-- DESCOBRIR ALUNOS -->
-        <section class="page" id="page-discover">
-
-            <div class="page-intro">
-
-                <div class="eyebrow">
-                    AMPLIE SEU CÍRCULO
-                </div>
-
-                <h1>Descobrir alunos</h1>
-
-                <p>
-                    Encontre pessoas da Behring Academy
-                    com interesses parecidos com os seus.
-                </p>
-
-            </div>
-
-
-            <div class="search-row">
-
-                <label class="search-box">
-
-                    <span>⌕</span>
-
-                    <input
-                        id="searchInput"
-                        placeholder="Buscar por nome, área ou interesse..."
-                    >
-
-                </label>
-
-
-                <select id="interestFilter">
-
-                    <option value="">Todas as áreas</option>
-
-                    <option>Programação</option>
-                    <option>Matemática</option>
-                    <option>Robótica</option>
-                    <option>Ciências</option>
-                    <option>Empreendedorismo</option>
-
-                </select>
-
-            </div>
-
-
-            <div id="allUsers" class="people-grid"></div>
-
-        </section>
-
-
-        <!-- AGENDAMENTOS -->
-        <section class="page" id="page-schedule">
-
-            <div class="page-intro">
-
-                <div class="eyebrow">
-                    SEUS ENCONTROS
-                </div>
-
-                <h1>Agendamentos</h1>
-
-                <p>
-                    Organize suas conversas com outros alunos.
-                </p>
-
-            </div>
-
-            <div id="scheduleList" class="schedule-list"></div>
-
-        </section>
-
-
-        <!-- CONVERSAS -->
-        <section class="page" id="page-messages">
-
-            <div class="page-intro">
-
-                <div class="eyebrow">
-                    TROQUE IDEIAS
-                </div>
-
-                <h1>Conversas</h1>
-
-                <p>
-                    Suas conexões começam com uma boa conversa.
-                </p>
-
-            </div>
-
-
-            <div class="panel message-panel">
-
-                <div class="empty-state">
-
-                    <div class="empty-icon">✉</div>
-
-                    <strong>
-                        Suas conversas aparecerão aqui
-                    </strong>
-
-                    <p>
-                        Visite Descobrir alunos e convide
-                        alguém para conversar.
-                    </p>
-
-                    <button class="primary-btn" data-go="discover">
-                        Encontrar alguém
-                    </button>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- PERFIL -->
-        <section class="page" id="page-profile">
-
-            <div class="page-intro">
-
-                <div class="eyebrow">
-                    SUA IDENTIDADE NA COMUNIDADE
-                </div>
-
-                <h1>Meu perfil</h1>
-
-                <p>
-                    Conte um pouco sobre você para que
-                    outros alunos possam te conhecer.
-                </p>
-
-            </div>
-
-
-            <form class="panel profile-form" id="profileForm">
-
-                <label>
-                    Nome de exibição
-
-                    <input
-                        id="profileName"
-                        value="Guilherme"
-                        maxlength="40"
-                        required
-                    >
-                </label>
-
-
-                <label>
-                    Apresentação
-
-                    <textarea
-                        id="profileBio"
-                        rows="3"
-                        maxlength="180"
-                        placeholder="O que você gosta de estudar?"
-                    ></textarea>
-
-                </label>
-
-
-                <label>
-                    Principal interesse
-
-                    <select id="profileInterest">
-
-                        <option>Programação</option>
-                        <option>Matemática</option>
-                        <option>Robótica</option>
-                        <option>Ciências</option>
-                        <option>Empreendedorismo</option>
-
-                    </select>
-
-                </label>
-
-
-                <button class="primary-btn" type="submit">
-                    Salvar perfil
-                </button>
-
-                <p class="form-hint">
-                    Demonstração: os dados ficam salvos
-                    apenas neste navegador.
-                </p>
-
-            </form>
-
-        </section>
-
-
-        <footer class="main-footer">
-
-            aBAchat
-            <span>•</span>
-            Conexões que inspiram novas ideias.
-
-        </footer>
-
-    </main>
-
-</div>
-
-
-<!-- MODAL DE AGENDAMENTO -->
-<div class="modal-backdrop" id="modalBackdrop">
-
-    <div class="modal" role="dialog" aria-modal="true">
-
-        <button class="modal-close" id="closeModal">
-            ×
-        </button>
-
-        <div class="eyebrow">
-            MARQUE UM ENCONTRO
+        <div class="floating-tag tag-top">✦ Compartilhe ideias</div>
+        <div class="floating-tag tag-bottom">↗ Conheça novas histórias</div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div><strong>01</strong><span>Uma comunidade</span></div>
+      <div><strong>∞</strong><span>Possibilidades de conexão</span></div>
+      <div><strong>100%</strong><span>Troca de conhecimento</span></div>
+    </section>
+
+    <section class="section about-section" id="sobre">
+      <div class="section-label">01 / SOBRE O PROJETO</div>
+      <div class="about-grid">
+        <div>
+          <h2>Mais do que conversar.<br><span>É sobre conectar.</span></h2>
+          <p class="section-intro">O aBAChat nasceu de uma ideia simples: aproximar pessoas que fazem parte de uma mesma comunidade, mas que nem sempre têm a oportunidade de se conhecer.</p>
         </div>
+        <div class="about-text">
+          <p>O aBAChat (A Behring Academy Chat), que significa Um Bate-papo Behring Academy, é uma iniciativa idealizada por Glenderson e Guilherme, alunos da turma Nexus.</p>
+          <p>A ideia surgiu da vontade de conhecer melhor os alunos das diferentes turmas do programa, trocar experiências, compartilhar conhecimentos e conversar com pessoas com quem nem sempre temos a oportunidade de interagir no dia a dia.</p>
+          <p>Inicialmente, a iniciativa funciona por meio de encontros virtuais pelo Google Meet. Os idealizadores selecionam pessoas com quem gostariam de conversar e utilizam uma roleta para definir os próximos convidados, incluindo a possibilidade de conversar também com professores, mentores e integrantes da equipe da BA.</p>
+          <p>Mais do que simplesmente conversar, o propósito é conhecer diferentes trajetórias, descobrir novas perspectivas, compartilhar aprendizados e fortalecer as conexões dentro da comunidade.</p>
+          <p>O aBAChat ainda está em sua fase inicial, mas tem potencial para crescer e se transformar em algo maior, criando novas oportunidades de interação, colaboração e troca de conhecimento.</p>
+          <div class="founders"><span class="founder-icon">✳</span><div><strong>Idealizado por Glenderson e Guilherme</strong><small>Alunos da turma Nexus</small></div></div>
+        </div>
+      </div>
+    </section>
 
-        <h2 id="modalTitle">
-            Agendar conversa
-        </h2>
+    <section class="section community-section" id="comunidade">
+      <div class="section-label">02 / COMUNIDADE</div>
+      <div class="section-heading">
+        <div><h2>Conheça novas pessoas.</h2><p>Descubra histórias e perspectivas de quem também faz parte da BA.</p></div>
+        <span class="section-symbol">✳</span>
+      </div>
+      <div class="community-grid" id="peopleGrid"></div>
+    </section>
 
-        <p id="modalDescription" class="muted">
-            Escolha um horário para conversar com este aluno.
-        </p>
+    <section class="roulette-section">
+      <div class="roulette-copy">
+        <div class="section-label light-label">03 / EXPERIÊNCIA</div>
+        <h2>Quem será o<br>próximo convidado?</h2>
+        <p>Às vezes, as melhores conversas acontecem com pessoas que ainda não conhecemos. Experimente a roleta do aBAChat.</p>
+      </div>
+      <div class="roulette-box">
+        <div class="roulette-wheel" id="rouletteWheel"><span>✳</span></div>
+        <p id="rouletteResult">Pronto para descobrir?</p>
+        <button class="roulette-button" id="spinButton">Girar a roleta ↗</button>
+      </div>
+    </section>
 
+    <section class="section meetings-section" id="encontros">
+      <div class="section-label">04 / ENCONTROS</div>
+      <div class="section-heading">
+        <div><h2>Uma conversa começa aqui.</h2><p>Organize suas ideias e manifeste interesse em participar de um encontro.</p></div>
+      </div>
+      <div class="meeting-card">
+        <div class="meeting-icon">◎</div>
+        <div class="meeting-info">
+          <h3>Encontros virtuais</h3>
+          <p>As conversas iniciais acontecem pelo Google Meet, com convidados selecionados pelos idealizadores.</p>
+          <span class="meeting-status">FORMATO INICIAL DO PROJETO</span>
+        </div>
+        <a class="primary-button" href="mailto:abachat.contato@gmail.com?subject=Interesse%20no%20aBAChat">Tenho interesse ↗</a>
+      </div>
+      <p class="disclaimer">O envio de interesse não confirma automaticamente uma reunião. A organização entrará em contato para combinar os detalhes.</p>
+    </section>
 
-        <form id="bookingForm">
+    <section class="closing">
+      <span>✳</span>
+      <h2>Uma comunidade mais próxima começa com uma conversa.</h2>
+      <p>aBAChat — A Behring Academy Chat</p>
+      <a href="#inicio">Voltar ao início ↑</a>
+    </section>
+  </main>
 
-            <input type="hidden" id="bookingUser">
+  <footer>
+    <a class="brand footer-brand" href="#inicio"><span class="brand-icon">a</span><span>aBA<span class="brand-light">Chat</span></span></a>
+    <p>Uma iniciativa idealizada por alunos da turma Nexus.</p>
+    <span>© 2026 aBAChat</span>
+  </footer>
 
-
-            <label>
-                Data
-
-                <input
-                    type="date"
-                    id="bookingDate"
-                    required
-                >
-            </label>
-
-
-            <label>
-                Horário
-
-                <input
-                    type="time"
-                    id="bookingTime"
-                    required
-                >
-            </label>
-
-
-            <label>
-                Assunto
-
-                <select id="bookingTopic">
-
-                    <option>
-                        Conhecer e trocar experiências
-                    </option>
-
-                    <option>
-                        Programação e OBI
-                    </option>
-
-                    <option>
-                        Matemática e olimpíadas
-                    </option>
-
-                    <option>
-                        Projetos e tecnologia
-                    </option>
-
-                    <option>
-                        Outro assunto
-                    </option>
-
-                </select>
-
-            </label>
-
-
-            <button class="primary-btn full-btn" type="submit">
-                Confirmar agendamento
-            </button>
-
-        </form>
-
-    </div>
-
-</div>
-
-
-<!-- NOTIFICAÇÕES -->
-<div class="toast" id="toast"></div>
-
-
-<!-- JAVASCRIPT -->
-<script src="app.js"></script>
-
+  <script src="app.js"></script>
 </body>
 </html>
